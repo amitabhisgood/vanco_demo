@@ -96,9 +96,11 @@ python src/train_eval.py
 
 python src/inference.py
 
+```
+
 ---
 
-```
+
 
 ## 📷 2. Real-Time American Sign Language (ASL) Detection
 
@@ -233,7 +235,12 @@ git clone https://github.com/amitabhisgood/vanco_demo.git
 cd vanco_demo
 
 # Install all operational frameworks, analytical architectures, and modeling drivers
+
+```
 pip install streamlit pdfplumber langchain-text-splitters chromadb sentence-transformers rank-bm25 networkx google-genai ultralytics opencv-python-headless lightgbm scikit-learn pandas numpy pyarrow
+
+```
+
 
 ### 3. Verification of Data Assets
 Before running execution or training tasks inside the individual folders, verify that raw input assets (such as the textbook PDF file and transactional csv arrays) are correctly placed inside their respective subdirectories within the localized data/ structures.

@@ -10,6 +10,7 @@ The workspace aggregates end-to-end implementation pipelines, data architecture 
 
 The repository splits each technical demonstration into its own independent root folder, housing standalone source code environments, specialized model weights, and localized data directories:
 
+```
 vanco_demo/
 │
 ├── asl_detection/                          # Use Case: American Sign Language Detection
@@ -52,6 +53,8 @@ vanco_demo/
         └── app_rag.py                      # Streamlit UI Dashboard & LLM Grounder
 
 ---
+
+```
 
 ## 📊 1. Grocery Sales Forecasting with External Events
 
@@ -102,11 +105,14 @@ streamlit run src/app_vision.py
 ### Architecture Blueprint
 A multi-layered hybrid information retrieval matrix integrating dense semantic vectors, sparse statistical token patterns, and a dynamic local knowledge network to power uncompromised, verifiable question answering over complex textbooks.
 
+```
                               ┌──> Dense Embedding Model ──> [ChromaDB Vector Store]
                               │
    [Source PDF Chunks] ───────┼──> Text Tokenization ───────> [BM25 Keyword Index]
                               │
                               └──> Relational Mapping ──────> [NetworkX Knowledge Graph]
+
+```
 
 ### Key Architectural Strategies
 * **Multi-Modal Retrieval Paths:** Queries execute across parallel dense semantic collections (all-MiniLM-L6-v2), token keyword frequencies (BM25Okapi), and graph topological paths (NetworkX) concurrently.
@@ -114,7 +120,9 @@ A multi-layered hybrid information retrieval matrix integrating dense semantic v
 * **Absolute Prompt Shielding:** Forwards context to gemini-2.5-flash at temperature=0.0. Enforces structural page citations (e.g., [Page 42]) and strict null state fallbacks: "I cannot answer this query based on the provided source documentation context boundaries."
 
 ### Execution Sequence
+```
 cd hybrid_rag
+
 # 1. Extract raw layout arrays and compile structural text fragments
 python src/ingestion.py
 
@@ -124,9 +132,12 @@ python src/indexer.py
 # 3. Launch the grounded RAG analytical user interface
 streamlit run src/app_rag.py
 
+```
 ---
 
 ## ⚖️ System Architecture Trade-off Matrix
+
+```
 
 | Component Layer | Production Architecture Choice | Technical Justification | Managed Operational Trade-off |
 | :--- | :--- | :--- | :--- |
@@ -134,6 +145,7 @@ streamlit run src/app_rag.py
 | **Vision Model** | YOLOv8 (Edge Footprint) | Sub-millisecond localized inference overhead supporting high web-camera sample tracking streams. | Bounding box spatial accuracy limits grow complex if handling multiple macro scales simultaneously. |
 | **Graph Relational Mapping** | Embedded NetworkX Matrix | Light-weight, hyper-efficient in-memory tracking footprint; avoids complex external infrastructure maintenance. | Designed for singular, high-density documents; scaling to absolute web-scale databases benefits from Neo4j/ArangoDB. |
 
+```
 ---
 
 ## 🛑 Technical Limitations & System Upgrade Roadmap

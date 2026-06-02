@@ -68,7 +68,7 @@ Implements a performance-optimized demand forecasting engine engineered to proce
 ### Execution Sequence
 
 ```
-
+(For Windows)
 cd grocery_forecasting
 
 ```
@@ -96,10 +96,9 @@ python src/train_eval.py
 
 python src/inference.py
 
-```
-
-
 ---
+
+```
 
 ## 📷 2. Real-Time American Sign Language (ASL) Detection
 
@@ -111,15 +110,40 @@ A localized computer vision interface running high-frequency real-time bounding-
 * **Inference Loop Optimization:** Employs an ultra-lean tracking architecture backed by optimized tensor inference pipelines to achieve sustainable, high-frame-rate tracking bounds on standard host CPUs.
 
 ### Execution Sequence
+
+```
+
 cd asl_detection
+
+```
+
 # 1. Transform raw images and compile COCO/YOLO compliance matrices
+
+```
 python src/dataset_preprocessor.py
 
+
+```
+
 # 2. Initiate bounding-box detection optimization training
+
+```
+
+
 python src/train_detector.py
 
+
+```
+
+
 # 3. Launch the live camera tracking dashboard interface
+
+```
+
 streamlit run src/app_vision.py
+
+```
+
 
 ---
 

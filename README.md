@@ -202,9 +202,10 @@ streamlit run src/app_rag.py
 
 ---
 
+
 ## ⚖️ System Architecture Trade-off Matrix
 
-```
+
 
 | Component Layer | Production Architecture Choice | Technical Justification | Managed Operational Trade-off |
 | :--- | :--- | :--- | :--- |
@@ -212,8 +213,9 @@ streamlit run src/app_rag.py
 | **Vision Model** | YOLOv8 (Edge Footprint) | Sub-millisecond localized inference overhead supporting high web-camera sample tracking streams. | Bounding box spatial accuracy limits grow complex if handling multiple macro scales simultaneously. |
 | **Graph Relational Mapping** | Embedded NetworkX Matrix | Light-weight, hyper-efficient in-memory tracking footprint; avoids complex external infrastructure maintenance. | Designed for singular, high-density documents; scaling to absolute web-scale databases benefits from Neo4j/ArangoDB. |
 
-```
+
 ---
+
 
 ## 🛑 Technical Limitations & System Upgrade Roadmap
 

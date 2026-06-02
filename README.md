@@ -15,15 +15,19 @@ vanco_demo/
 │
 ├── asl_detection/                          # Use Case: American Sign Language Detection
 │   ├── data/
-│   │   ├── annotations/                    # COCO/YOLO structured frame markings
-│   │   ├── train/                          # Dynamic sign-language video frames
-│   │   └── val/
-│   ├── models/
-│   │   └── asl_yolov8_best.pt              # Trained real-time vision weights
+│   ├── dataset.yaml
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── docs/
+│   │   └── ASL_Vision_Studio_User_Manual_Updated              
 │   └── src/
-│       ├── dataset_preprocessor.py         # Frame extraction and box normalization
-│       ├── train_detector.py               # Hyperparameter tuned YOLO execution script
-│       └── app_vision.py                   # Real-time Streamlit webcam dashboard
+│       ├── app.py         
+│       ├── auto_annotate.py               
+│       ├── inference.py               
+│       ├── test.py               
+│       ├── train.py               
+│       ├── tune.py               
+│       └── dataset_capture.py                   
 │
 ├── grocery_forecasting/                    # Use Case: Grocery Sales Forecasting
 │   ├── data/
@@ -36,6 +40,8 @@ vanco_demo/
 │   │   ├── test.csv                        # Out-of-time inference horizon target sheet
 │   │   ├── train.csv                       # Raw historical sales transaction table (Large)
 │   │   └── transactions.csv                # Store-level daily transaction volume records
+│   ├── docs/
+│   │   └── Grocery_Sales_Forecasting_Manual.pdf                
 │   └── src/
 │       ├── compute.py                      # Master orchestration, training, & inference loop
 │       ├── data_pipeline.py                # Forward-filled chronological table join engine
@@ -45,12 +51,14 @@ vanco_demo/
 │
 └── hybrid_rag/                             # Use Case: Hybrid RAG Textbook Application
     ├── data/
-    │   ├── NCERT-Class-12-Physics-Part-1.pdf # Immutable Core Source Document
+    │   └── NCERT-Class-12-Physics-Part-1.pdf # Immutable Core Source Document
     │   ├── processed_chunks.json           # Layout-parsed text chunk fragments
     │   └── indexes/
     │       ├── chroma_db/                  # Persistent ChromaDB vector store
     │       ├── bm25_index.pkl              # Serialized BM25Okapi matrix
     │       └── knowledge_graph.pkl         # Serialized NetworkX Relational Graph
+    ├── docs/
+    │   └── NCERT_Physics_Hybrid_RAG_User_Manual.pdf 
     └── src/
         ├── ingestion.py                    # PDF Parser & Recursive Fragmenter
         ├── indexer.py                      # Multi-Layer Index Construction Pipeline

@@ -25,27 +25,23 @@ vanco_demo/
 │       ├── train_detector.py               # Hyperparameter tuned YOLO execution script
 │       └── app_vision.py                   # Real-time Streamlit webcam dashboard
 │
-grocery_forecasting/
-│
-├── data/
-│   ├── feature_importance.csv     # Gain-based explainability matrix output
-│   ├── holidays_events.csv        # National, regional, and local events calendar
-│   ├── oil.csv                    # Daily macroeconomic price signals
-│   ├── sample_submission.csv      # Baseline target template file
-│   ├── stores.csv                 # Store metadata and spatial segmentation
-│   ├── submission.csv             # Optimized multi-horizon test predictions
-│   ├── test.csv                   # Out-of-time inference horizon target sheet
-│   ├── train.csv                  # Raw historical sales transaction table (Large)
-│   └── transactions.csv           # Store-level daily transaction volume records
-│
-└── src/
-    ├── compute.py                 # Master orchestration, training, & inference loop
-    ├── data_pipeline.py           # Forward-filled chronological table join engine
-    ├── features.py                # Row-preserved lag/rolling windows & embeddings
-    ├── train.py                   # Local hyperparameter tuning experiment script
-    └── validation.py              # Out-of-time chronological window validation│
-│
-│
+├── grocery_forecasting/                    # Use Case: Grocery Sales Forecasting
+│   ├── data/
+│   │   ├── feature_importance.csv          # Gain-based explainability matrix output
+│   │   ├── holidays_events.csv             # National, regional, and local events calendar
+│   │   ├── oil.csv                         # Daily macroeconomic price signals
+│   │   ├── sample_submission.csv           # Baseline target template file
+│   │   ├── stores.csv                      # Store metadata and spatial segmentation
+│   │   ├── submission.csv                  # Optimized multi-horizon test predictions
+│   │   ├── test.csv                        # Out-of-time inference horizon target sheet
+│   │   ├── train.csv                       # Raw historical sales transaction table (Large)
+│   │   └── transactions.csv                # Store-level daily transaction volume records
+│   └── src/
+│       ├── compute.py                      # Master orchestration, training, & inference loop
+│       ├── data_pipeline.py                # Forward-filled chronological table join engine
+│       ├── features.py                     # Row-preserved lag/rolling windows & embeddings
+│       ├── train.py                        # Local hyperparameter tuning experiment script
+│       └── validation.py                   # Out-of-time chronological window validation
 │
 └── hybrid_rag/                             # Use Case: Hybrid RAG Textbook Application
     ├── data/
@@ -60,7 +56,6 @@ grocery_forecasting/
         ├── indexer.py                      # Multi-Layer Index Construction Pipeline
         ├── retriever.py                    # HybridGraphRetriever Engine (RRF Fusion)
         └── app_rag.py                      # Streamlit UI Dashboard & LLM Grounder
-
 ---
 
 ```

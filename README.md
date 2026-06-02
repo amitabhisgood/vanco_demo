@@ -66,15 +66,38 @@ Implements a performance-optimized demand forecasting engine engineered to proce
 * **Feature Engineering Vectors:** Dynamically maps external event calendars, promotional profiles, rolling sales aggregations (t-7, t-14, t-30), and localized socio-economic indicators.
 
 ### Execution Sequence
+
+```
+
 cd grocery_forecasting
+
+```
+
 # 1. Execute robust feature engineering over raw transactions
+
+```
+
 python src/feature_engineering.py
 
+
+```
+
 # 2. Execute cross-validated model training and serialize ensemble models
+
+```
+
 python src/train_eval.py
 
+
+```
 # 3. Output batch predictions
+
+```
+
 python src/inference.py
+
+```
+
 
 ---
 
@@ -120,19 +143,37 @@ A multi-layered hybrid information retrieval matrix integrating dense semantic v
 * **Absolute Prompt Shielding:** Forwards context to gemini-2.5-flash at temperature=0.0. Enforces structural page citations (e.g., [Page 42]) and strict null state fallbacks: "I cannot answer this query based on the provided source documentation context boundaries."
 
 ### Execution Sequence
-```
+
 cd hybrid_rag
 
 # 1. Extract raw layout arrays and compile structural text fragments
-python src/ingestion.py
-
-# 2. Build ChromaDB instances, BM25 matrices, and local knowledge networks
-python src/indexer.py
-
-# 3. Launch the grounded RAG analytical user interface
-streamlit run src/app_rag.py
 
 ```
+
+python src/ingestion.py
+
+```
+
+# 2. Build ChromaDB instances, BM25 matrices, and local knowledge networks
+
+```
+
+python src/indexer.py
+
+```
+
+
+# 3. Launch the grounded RAG analytical user interface
+
+```
+
+streamlit run src/app_rag.py
+
+
+```
+
+
+
 ---
 
 ## ⚖️ System Architecture Trade-off Matrix
@@ -164,7 +205,7 @@ Ensure you are executing code in a python environment bounded within **Python 3.
 ### 2. Environment Setup
 Clone this repository and configure the global execution suite tools via pip:
 
-git clone https://github.com/YOUR_USERNAME/vanco_demo.git
+git clone https://github.com/amitabhisgood/vanco_demo.git
 cd vanco_demo
 
 # Install all operational frameworks, analytical architectures, and modeling drivers

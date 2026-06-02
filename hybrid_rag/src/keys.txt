@@ -1,0 +1,27 @@
+Gemini:
+~
+AQ.Ab8RN6IY9x46FL0npVWG5J9R8n97vMEXiG6vlEZiJmx0NefFmA
+vanco_rag
+projects/342924103106(Project name)
+342924103106 (Project number)
+
+~
+Kaggle:
+~
+KGAT_4ecb3f04c1e28ccea8df0b2712d7315d
+//To use this token, set the KAGGLE_API_TOKEN environment variable:
+set(export) KAGGLE_API_TOKEN=KGAT_4ecb3f04c1e28ccea8df0b2712d7315d (set in console)
+//Or save it to ~/.kaggle/access_token, where the client will read it automatically:
+mkdir -p ~/.kaggle && echo KGAT_4ecb3f04c1e28ccea8df0b2712d7315d > ~/.kaggle/access_token && chmod 600 ~/.kaggle/access_token
+//Then you can use the client as follows:
+kaggle competitions list
+~
+
+~~~~~
+'''
+AQ.Ab8RN6IY9x46FL0npVWG5J9R8n97vMEXiG6vlEZiJmx0NefFmA
+vanco_rag
+projects/342924103106(Project name)
+342924103106 (Project number)
+'''
+~~~~~

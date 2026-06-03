@@ -89,7 +89,7 @@ cd grocery_forecasting
 
 ```
 
-python src/feature_engineering.py
+python src/features.py
 
 
 ```
@@ -98,7 +98,7 @@ python src/feature_engineering.py
 
 ```
 
-python src/train_eval.py
+python src/train.py
 
 
 ```
